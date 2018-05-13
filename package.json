@@ -1,0 +1,39 @@
+{
+  "name": "redux-clue",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:alevkon/redux-clue.git",
+  "author": "Alexey Konyshev <alevkon@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "NODE_ENV=test jest --runInBand",
+    "test:inspect": "NODE_ENV=test node --inspect-brk node_modules/.bin/jest --runInBand "
+  },
+  "dependencies": {
+    "immutable": "^3.8.2",
+    "lodash": "^4.17.10",
+    "redux": "^4.0.0",
+    "reselect": "^3.0.1"
+  },
+  "jest": {
+    "verbose": true,
+    "moduleDirectories": [
+      "node_modules",
+      "lib"
+    ],
+    "globals": {
+      "NODE_ENV": "test"
+    },
+    "moduleFileExtensions": [
+      "js"
+    ]
+  },
+  "devDependencies": {
+    "babel-jest": "^22.0.6",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "jest": "^22.4.3"
+  }
+}
