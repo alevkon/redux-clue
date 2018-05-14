@@ -10,9 +10,12 @@
     "test:inspect": "NODE_ENV=test node --inspect-brk node_modules/.bin/jest --runInBand "
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "immutable": "^3.8.2",
     "lodash": "^4.17.10",
+    "pluralize": "^7.0.0",
     "redux": "^4.0.0",
+    "redux-saga": "^0.16.0",
     "reselect": "^3.0.1"
   },
   "jest": {
