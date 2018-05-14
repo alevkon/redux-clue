@@ -1,16 +1,16 @@
-import ReduxClue, { queries, events } from "../lib/index";
+import ReduxClue, { queries, events } from '../lib/index';
 
-describe("Reducer", () => {
+describe('Reducer', () => {
   let api;
   beforeAll(()=> {
     api = ReduxClue({
-      models: ["user", "product"]
+      models: ['user', 'product']
     })
   });
-  describe("Request event", () => {
-    test("New request should create new item in _requests and [identity]", () => {
+  describe('Request event', () => {
+    test('New request should create new item in _requests and [identity]', () => {
       const action = api.actions.byClue({
-        identity: "user",
+        identity: 'user',
         query: queries.FIND_BY_ID,
         id: 1
       });
@@ -35,9 +35,9 @@ describe("Reducer", () => {
         }
       });
     });
-    test("Second request should create new item only in _requests", () => {
+    test('Second request should create new item only in _requests', () => {
       const clueData = {
-        identity: "user",
+        identity: 'user',
         query: queries.FIND_BY_ID,
         id: 1
       };
@@ -72,15 +72,15 @@ describe("Reducer", () => {
     });
   });
 
-  describe("Success event", () => {
-    test("Should remove from _requests and put data into [identity]", () => {
+  describe('Success event', () => {
+    test('Should remove from _requests and put data into [identity]', () => {
       const clueData = {
-        identity: "user",
+        identity: 'user',
         query: queries.FIND_BY_ID,
         id: 1
       };
-      const responseHeaders = { someHeader: "ok" };
-      const responseData = { someAttribute: "some value" };
+      const responseHeaders = { someHeader: 'ok' };
+      const responseData = { someAttribute: 'some value' };
 
       const action1 = api.actions.byClue(clueData);
       action1.payload.requestId = Math.random();
@@ -108,15 +108,15 @@ describe("Reducer", () => {
     });
   });
 
-  describe("Error event", () => {
-    test("Should patch _requests and put data into [identity]", () => {
+  describe('Error event', () => {
+    test('Should patch _requests and put data into [identity]', () => {
       const clueData = {
-        identity: "user",
+        identity: 'user',
         query: queries.FIND_BY_ID,
         id: 1
       };
-      const responseHeaders = { someHeader: "ok" };
-      const responseData = { someAttribute: "some value" };
+      const responseHeaders = { someHeader: 'ok' };
+      const responseData = { someAttribute: 'some value' };
 
       const action1 = api.actions.byClue(clueData);
       action1.payload.requestId = Math.random();
