@@ -11,7 +11,7 @@ const clue = ReduxClue({
 });
 
 const propsToProductClue = props => ({ identity: 'product', query: queries.FIND_ONE, id: props.productId });
-const productSelector = clue.selectors.byClue(propsToClue);
+const productSelector = clue.selectors.byClue(propsToProductClue);
 
 @connect(
   (state, props) => ({
