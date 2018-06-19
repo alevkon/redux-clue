@@ -98,7 +98,7 @@ describe('Reducer', () => {
               data: responseData,
               meta: {
                 clue: action1.payload.clue,
-                fromResponse: responseHeaders
+                responseMeta: responseHeaders
               }
             }
           }
@@ -131,7 +131,7 @@ describe('Reducer', () => {
         data: responseData,
         meta: {
           clue: action1.payload.clue,
-          fromResponse: responseHeaders
+          responseMeta: responseHeaders
         }
       };
 
